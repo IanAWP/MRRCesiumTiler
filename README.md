@@ -18,7 +18,7 @@ Navigate to the cesium folder and install using.
 ```Batchfile
 npm install -d
 ```
-Google go and the [Cesium Terrain Server](https://github.com/geo-data/cesium-terrain-server) are also required for tile hosting.
+Google go and the [Cesium Terrain Server](https://github.com/geo-data/cesium-terrain-server) are also required for tile hosting. *Do remember that a layers.json file is required at the root level of the terrain server*.  I've uploaded one that matches the output format used by the MRR generator.
 
 After setup, run the electron app with 
 ```Batchfile
