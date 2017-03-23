@@ -1,0 +1,19 @@
+@import url(./node_modules/cesium/Build/Cesium/Widgets/widgets.css);
+
+body {
+    position: relative
+}
+ 
+ html, body, #cesiumContainer {
+ height: 100%; margin: 0; padding: 0; overflow: hidden;
+ }
+ .leftAlign {
+ display:inline-block;
+ margin:5px;
+ }
+ #baseHttp {
+ width:300px;
+ }
+ .textLabel{
+ font-family: Verdana,sans-serif;
+ }

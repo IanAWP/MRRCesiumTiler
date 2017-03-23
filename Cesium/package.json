@@ -1,0 +1,21 @@
+{
+  "name": "mrr_terrain",
+  "version": "1.0.0",
+  "description": "terrain tiles in MRR",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cesium": "^1.26.0",
+    "electron-packager": "^8.1.0",
+    "electron-prebuilt": "^1.4.3"
+  },
+  "dependencies": {
+    "cesium": "^1.26.0",
+    "electron-json-storage": "^3.0.1",
+    "electron-storage": "^1.0.7"
+  }
+}

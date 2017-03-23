@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+      <title>MRR Terrain Server</title>
+      <script src="./node_modules/cesium/Build/CesiumUnminified/Cesium.js"></script>
+      <script>
+         const app = require('electron').remote.app
+         const storage = require('electron-json-storage');
+         
+      </script>
+    
+      <link rel="stylesheet" type="text/css" href="theme.css">
+   </head>
+   <body>
+      <div id="dir">
+         <div class="leftAlign">
+            <div class="textLabel">Base terrain address</div>
+            <input id="baseHttp" type="text">
+         </div>
+         <div class="leftAlign">
+            <div class="textLabel">Tileset</div>
+            <input id="tileSet" type="text">
+         </div>
+         <div class="leftAlign">
+            <button id="update" onclick="updateTerrain()">Update</button>
+         </div>
+      </div>
+      <div id="cesiumContainer">
+      </div>
+      <script>
+         storage.get('MRUtile', function(error, data) {
+         if (error) throw error;
+          updateAddress(data.base, data.tile);
+         });
+         Cesium.BingMapsApi.defaultKey = 'AqHUYc7R8kMI6SdAoqAJr-uZX9-5BhFpehxOkg9mHXEdTK0MAIuePOxK0wknAw1N';
+         var viewer = new Cesium.Viewer('cesiumContainer', {
+         	timeline:false,
+         	infoBox:false,
+         	navigationHelpButton:false,
+         	navigationInstructionsInitiallyVisible:false,
+         	shadows:true,
+         	terrainExaggeration : 2.0,
+         	baseLayerPicker:false,
+         	animation : false,
+         });
+         
+         
+         function updateAddress(base, tileset){
+         	document.getElementById("baseHttp").value= base;
+         	document.getElementById("tileSet").value= tileset;
+         }
+         
+         
+         
+         
+         function updateTerrain() {
+         
+         	var baseAddress = document.getElementById("baseHttp").value;
+         	var tileSet = document.getElementById("tileSet").value;
+         
+         	baseAddress += baseAddress.endsWith("/") ? "" : "/"
+         
+         	var terrainProvider = new Cesium.CesiumTerrainProvider({
+         		 url : baseAddress+tileSet
+         	 });
+         	viewer.terrainProvider = terrainProvider;
+         	storage.set('MRUtile', { base: baseAddress, tile: tileSet });
+         }
+         
+      </script>
+   </body>
+</html>
