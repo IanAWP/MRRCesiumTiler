@@ -15,7 +15,6 @@
   },
   "dependencies": {
     "cesium": "^1.26.0",
-    "electron-json-storage": "^3.0.1",
-    "electron-storage": "^1.0.7"
+    "electron-json-storage": "^3.0.1"
   }
 }
