@@ -5,7 +5,7 @@ Cesium is a web-based GIS written in javascript and webGL.  It does a lot of wha
 
 For those interest in creating Cesium terrain tiles, AGI already host the the [Cesium Terrain Builder](https://github.com/geo-data/cesium-terrain-builder), available as a docker image or from github.  The [Cesium Terrain Server](https://github.com/geo-data/cesium-terrain-server) can then be used to host the generated tilesets.
 
-The existing terrain builder uses GDAL for input/output and currently a new commercial format - MapInfo MRR - does not have a GDAL driver.  As MRR ships with an .NET API I've used that here to generate cesium compatible heightmaps.  As the MRR API itself has fairly wide ranging format support this project could be modified in future to generate tiles from other elevation data sources.
+The existing terrain builder uses GDAL for input/output and currently a new commercial format - MapInfo MRR - does not have a GDAL driver.  As MRR ships with a .NET API I've used that here to generate cesium compatible heightmaps.  As the MRR API itself has fairly wide ranging format support this project could be modified in future to generate tiles from other elevation data sources.
 
 ### Usage and Requirements
 
