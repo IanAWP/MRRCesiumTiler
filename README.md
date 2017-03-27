@@ -1,6 +1,7 @@
-# Creating Cesium Terrain Tiles using the MapInfo Raster API
 <img width="729" alt="mtn" src="https://github.com/IanAWP/ianawp.github.io/blob/master/images/image_0.png">
-For a mored detailed writeup and explanation of the code, [head to my developer pages](https://ianawp.github.io/)
+# Creating Cesium Terrain Tiles using the MapInfo Raster API
+
+For a more detailed writeup and explanation of the code, [head to my developer pages.](https://ianawp.github.io/)
 
 ### Usage and Requirements
 
